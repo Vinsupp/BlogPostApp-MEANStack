@@ -1,0 +1,79 @@
+<!--<div>
+    <h3>{{article.title}}</h3>
+    <p>posted by {{article.name}} &bull; {{article.createdAt  | date: 'fullDate'}}</p>
+    <p>{{article.content}}</p>
+</div>-->
+
+<mat-card *ngIf="article">
+    <mat-card-content>
+        <img [src]='article.imageURL' alt="{{article.title}}"/>  
+        <h2> {{article.title}} </h2>
+        <p> posted by {{article.name}} &bull; on {{article.createdAt  | date: 'fullDate'}}</p>
+        <br><br>
+        <h3>Intro</h3>
+        <p>{{article.description}}</p>
+        <br><br>
+        <h3>Article</h3>
+        <p>{{article.content}}</p>
+
+    
+   
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-icon-button (click)="doUpdate(article)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="doDelete(article)">
+            <mat-icon>delete</mat-icon>
+        </button>
+        
+    </mat-card-actions>
+    
+</mat-card>
+
+
+
+
+
+<!--<div >
+    {{article._id}}
+    
+</div>
+
+<div>
+    {{article.imageURL}}
+
+</div>
+<div>
+    {{article.title}}
+
+</div>
+<div>
+    {{article.content}}
+
+</div>
+<div>
+    {{article.createdAt}}
+
+</div>
+
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" [(ngModel)]="article.title" class="form-control">
+    
+</div>
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" [(ngModel)]="article.name" class="form-control">
+    
+</div>
+<div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" name="descriptiom" [(ngModel)]="article.description" class="form-control">
+    
+</div>
+<div class="form-group">
+    <label for="content">Content</label>
+    <input type="text" name="content" [(ngModel)]="article.content" class="form-control">
+    
+</div>-->

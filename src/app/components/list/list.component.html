@@ -1,0 +1,59 @@
+<!--<div *ngFor="let article of articles">
+    <h2 (click)="doViewArticle(article)">{{article.title}}</h2>
+    <p>{{article.description}}</p>
+</div>-->
+<section>
+    <mat-card *ngFor="let article of articles">
+        <mat-card-content (click)="doViewArticle(article)">
+            <img [src]='article.imageURL' alt="{{article.title}}"/>  
+            <h2> {{article.title}} </h2>
+            <p> posted by {{article.name}} &bull; on {{article.createdAt  | date: 'fullDate'}}</p>
+            
+            
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-icon-button (click)="doUpdate(article)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="doDelete(article)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            
+        </mat-card-actions>
+        
+    </mat-card>
+</section>
+
+
+
+
+<!--<div class="card">
+    <div class="card-body">
+        <h4 class="card-title"> Articles and Titles</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Name</th>
+                    <th>Date</th>
+
+                    <td>Operations</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let article of articles">
+                    <td>{{article._id}}</td>
+                    <td>{{article.title}}</td>
+                    <td>{{article.name}}</td>
+                    <td>{{article.createdAt}}</td>
+                    
+                    <td><button class="btn btn-danger" (click)="doViewArticle(article)">Read Article</button></td>                    
+                    <td><button class="btn btn-danger" (click)="doDelete(article)">Delete</button></td>
+                    <td><button class="btn btn-primary" (click)="doUpdate(article)">Update</button></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>-->

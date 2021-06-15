@@ -1,0 +1,88 @@
+<!--<form (ngSubmit)="createOrUpdate()">
+    <mat-form-field>
+        <input matInput placeholder="Author name" [(ngModel)]="article.name">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="Post Title" [(ngModel)]="article.title">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="Description" [(ngModel)]="article.description">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="Image URL" [(ngModel)]="article.imageURL">
+    </mat-form-field>
+    <br>
+    <br>
+    
+    <mat-form-field>
+        <textarea matInput placeholder="Write your blog here" [(ngModel)]="article.content"></textarea>
+    </mat-form-field>
+    <br>
+    <br>
+    <!--<button mat-raised-button color="accent" (click)="createOrUpdate()">Create Post</button>
+    
+    <input type="submit" value="Submit" class="btn btn-success" color="accent">
+
+</form>-->
+
+
+
+
+
+
+<form (ngSubmit)="createOrUpdate()">
+    <!--<div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" name="_id" [(ngModel)]="article._id" class="form-control">
+
+    </div>-->
+    <br>
+    
+    <div class="form-group">
+        
+        <input type="text" placeholder="Author Name" name="name" [(ngModel)]="article.name" class="form-control">
+        
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        
+        <input type="text" placeholder="Post Title" name="title" [(ngModel)]="article.title" class="form-control">
+        
+    </div>
+
+    <br>
+    <br>
+    <div class="form-group">
+        
+        <input type="text" placeholder="Image URL" name="imageURL" [(ngModel)]="article.imageURL" class="form-control">
+
+    </div>
+    <br>
+    <br>
+    
+    <div class="form-group">
+        
+        <textarea placeholder="Post Description" name="description" [(ngModel)]="article.description" class="form-control"></textarea>
+        
+    </div>
+    <br>
+    <br>
+   
+    
+    <div class="form-group">
+        
+        <textarea rows="4" placeholder="Write your Blog here!"  name="content" [(ngModel)]="article.content" class="form-control"></textarea>
+        
+    </div>
+    <br>
+    
+    
+    <button mat-raised-button color="accent" routerLink="/" >Cancel</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Submit"  class="btn btn-success">
+
+</form>
