@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const URL = 'mongodb+srv://admin:1234@cluster0.coasv.mongodb.net/meanDb?retryWrites=true&w=majority';
+const URL = 'Your MongoDb Atlas Link';
 
 const connectDB = async () =>{
     try{
